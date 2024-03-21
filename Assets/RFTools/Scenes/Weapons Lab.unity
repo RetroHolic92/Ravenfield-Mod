@@ -1875,10 +1875,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dagger
       objectReference: {fileID: 0}
-    - target: {fileID: 1000011943371528, guid: ab7c2e73439d0944d92215e82be484ed, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4000013466251914, guid: ab7c2e73439d0944d92215e82be484ed, type: 3}
       propertyPath: m_RootOrder
       value: 10
