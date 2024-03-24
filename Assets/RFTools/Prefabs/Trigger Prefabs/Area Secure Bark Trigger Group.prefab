@@ -243,14 +243,14 @@ MonoBehaviour:
     turretSpawner: {fileID: 0}
     vehicleInstance: {fileID: 0}
   targetGameObject: {fileID: 0}
-  team: 3
+  team: 2
   volume: {fileID: 2440614776686521399}
   count: 0
   onTrue:
-    destinations: []
-  onFalse:
     destinations:
-    - {fileID: 6998045196698979951}
+    - {fileID: 2440614776686521801}
+  onFalse:
+    destinations: []
 --- !u!1 &3146378325297446931
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,7 +337,7 @@ MonoBehaviour:
   lines:
   - actorPose: p grunt
     overrideName: 
-    text: Area Secure!
+    text: Overlap!
     portraitGrain: 0
     onSayLine:
       destinations: []
