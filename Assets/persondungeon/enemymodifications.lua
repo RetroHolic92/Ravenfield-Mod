@@ -1,5 +1,6 @@
 behaviour("enemymodifications")
 
+
 function enemymodifications:Start()
 	--don't delete this
 	self.spawnEnemiesSignal = self.gameObject.GetComponent(TriggerScriptedSignal)
@@ -9,4 +10,5 @@ function enemymodifications:Start()
 	self.spawnEnemiesSignal.Send("spawnenemies")
 	
 	self.master.script.StartCoroutine(self.master:ModifyEnemies(self.spawnEnemiesSignal))
+
 end
