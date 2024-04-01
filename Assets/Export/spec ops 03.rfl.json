@@ -1,6 +1,6 @@
 ﻿{
     "hasBuiltInGameMode": false,
-    "usesTriggerSystem": false,
+    "usesTriggerSystem": true,
     "visibleInInstantAction": true,
     "suggestedBots": 60,
     "displayName": "Spec Ops 03",
