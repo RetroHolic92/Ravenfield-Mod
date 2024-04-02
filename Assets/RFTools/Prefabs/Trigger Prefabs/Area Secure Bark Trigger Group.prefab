@@ -1,5 +1,800 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2128228794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2128228795}
+  - component: {fileID: 2128228801}
+  - component: {fileID: 2128228800}
+  - component: {fileID: 2128228798}
+  - component: {fileID: 2128228797}
+  - component: {fileID: 2128228796}
+  - component: {fileID: 2128228802}
+  - component: {fileID: 6381081749088172997}
+  - component: {fileID: 5344888457655880199}
+  - component: {fileID: 8344509443386213455}
+  - component: {fileID: 7059263441310574411}
+  - component: {fileID: 3156585819149695864}
+  - component: {fileID: 6380548981142715035}
+  m_Layer: 0
+  m_Name: Teleport
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2128228795
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128228794}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2440614776686521398}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2128228801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128228794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1514fc679ce3eea4eaa7af9370887cee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoText: 'If you want anything else to happen besides just the dialog playing,
+    you can add more receivers to the TriggerPassthroughNode OnTriggered signal.
+
+
+    Keep
+    in mind that this node will only be triggered if the player is inside the volume
+    when the last enemy drives, so '
+--- !u!114 &2128228800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128228794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6d99b4fcab7f744b7b4b317152fd8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  repeatType: 0
+  onTriggered:
+    destinations:
+    - {fileID: 2128228797}
+    - {fileID: 2128228796}
+    - {fileID: 2128228802}
+    - {fileID: 6381081749088172997}
+    - {fileID: 5344888457655880199}
+    - {fileID: 8344509443386213455}
+--- !u!114 &2128228798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128228794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1514fc679ce3eea4eaa7af9370887cee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoText: The next component deactivates the entire GameObject after the dialog
+    has finished to remove any overhead from updating
+--- !u!114 &2128228797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128228794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 239cde7441efe6042a16c228ec477b66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  repeatType: 0
+  objectsToActivate: []
+  objectsToDeactivate:
+  - {fileID: 0}
+--- !u!114 &2128228796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128228794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc3bd8520edf34f4d8a40bba36c0ddd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  repeatType: 0
+  targetType: 0
+  actor:
+    type: 0
+    squad:
+      type: 0
+      spawner: {fileID: 0}
+      closestToPoint: {fileID: 0}
+      filter:
+        filters: []
+      maxDistance: 0
+      team: 0
+    squadmemberIndex: 0
+    vehicle:
+      type: 0
+      vehicleSpawner: {fileID: 0}
+      turretSpawner: {fileID: 0}
+      vehicleInstance: {fileID: 0}
+    seatIndex: 0
+  destination: {fileID: 0}
+--- !u!114 &2128228802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128228794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 094088eed9467e047b2bd4623fed3e71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  repeatType: 0
+  team: 3
+  spawnSource: 0
+  respawnType: 0
+  autoRespawnTime: 10
+  squadMembersToSpawn: 1
+  pathGroup: {fileID: 0}
+  spawnAtPathGroupNodes: 0
+  detectionGroup: {fileID: 0}
+  onSquadAlerted:
+    destinations: []
+  squadState:
+    isAlert: 0
+    walkWhileUnalerted: 0
+    slowDetection: 0
+    leavePathGroupWhenAlerted: 0
+    allowLeaveVehicleWhenStuck: 0
+    followersInvisibleToUnalertedEnemies: 0
+    engagementRule: 0
+    order:
+      type: 0
+      target: {fileID: 0}
+      source: {fileID: 0}
+      targetPoint: {fileID: 0}
+  squadMemberInfo:
+  - overrideName: 
+    overrideSpawnPoint: {fileID: 0}
+    loadout:
+      useAutoPick: 1
+      autoPickStrategy:
+        type: 0
+        distance: 0
+      primary: 
+      secondary: 
+      gear1: 
+      gear2: 
+      gear3: 
+      weaponStates:
+        primary:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        secondary:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        gear1:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        gear2:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        gear3:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+    overrideSkin: {fileID: 0}
+    equipped: 1
+    health: 0
+    hp: 1
+    attackersIgnoreEngagementRule: 0
+    dropsAmmoWhenKicked: 1
+    canDeployParachute: 1
+  squadMemberAIInfo:
+  - skill: 1
+    modifier:
+      meleeChargeRange: 30
+      canSprint: 1
+      ignoreFovCheck: 0
+      dieOnMovementFail: 0
+      alwaysChargeTarget: 0
+      showKillMessage: 1
+      canJoinPlayerSquad: 1
+      maxDetectionDistance: 1000
+      vehicleTopSpeedMultiplier: 1
+  aliveActorsOnTeamCap: 0
+  capCount: 30
+  onSpawnCompleteTrigger:
+    destinations: []
+--- !u!114 &6381081749088172997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128228794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 094088eed9467e047b2bd4623fed3e71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  repeatType: 0
+  team: 3
+  spawnSource: 0
+  respawnType: 0
+  autoRespawnTime: 10
+  squadMembersToSpawn: 1
+  pathGroup: {fileID: 0}
+  spawnAtPathGroupNodes: 0
+  detectionGroup: {fileID: 0}
+  onSquadAlerted:
+    destinations: []
+  squadState:
+    isAlert: 0
+    walkWhileUnalerted: 0
+    slowDetection: 0
+    leavePathGroupWhenAlerted: 0
+    allowLeaveVehicleWhenStuck: 0
+    followersInvisibleToUnalertedEnemies: 0
+    engagementRule: 0
+    order:
+      type: 0
+      target: {fileID: 0}
+      source: {fileID: 0}
+      targetPoint: {fileID: 0}
+  squadMemberInfo:
+  - overrideName: 
+    overrideSpawnPoint: {fileID: 0}
+    loadout:
+      useAutoPick: 1
+      autoPickStrategy:
+        type: 0
+        distance: 0
+      primary: 
+      secondary: 
+      gear1: 
+      gear2: 
+      gear3: 
+      weaponStates:
+        primary:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        secondary:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        gear1:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        gear2:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        gear3:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+    overrideSkin: {fileID: 0}
+    equipped: 1
+    health: 0
+    hp: 1
+    attackersIgnoreEngagementRule: 0
+    dropsAmmoWhenKicked: 1
+    canDeployParachute: 1
+  squadMemberAIInfo:
+  - skill: 1
+    modifier:
+      meleeChargeRange: 30
+      canSprint: 1
+      ignoreFovCheck: 0
+      dieOnMovementFail: 0
+      alwaysChargeTarget: 0
+      showKillMessage: 1
+      canJoinPlayerSquad: 1
+      maxDetectionDistance: 1000
+      vehicleTopSpeedMultiplier: 1
+  aliveActorsOnTeamCap: 0
+  capCount: 30
+  onSpawnCompleteTrigger:
+    destinations: []
+--- !u!114 &5344888457655880199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128228794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 094088eed9467e047b2bd4623fed3e71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  repeatType: 0
+  team: 3
+  spawnSource: 0
+  respawnType: 0
+  autoRespawnTime: 10
+  squadMembersToSpawn: 1
+  pathGroup: {fileID: 0}
+  spawnAtPathGroupNodes: 0
+  detectionGroup: {fileID: 0}
+  onSquadAlerted:
+    destinations: []
+  squadState:
+    isAlert: 0
+    walkWhileUnalerted: 0
+    slowDetection: 0
+    leavePathGroupWhenAlerted: 0
+    allowLeaveVehicleWhenStuck: 0
+    followersInvisibleToUnalertedEnemies: 0
+    engagementRule: 0
+    order:
+      type: 0
+      target: {fileID: 0}
+      source: {fileID: 0}
+      targetPoint: {fileID: 0}
+  squadMemberInfo:
+  - overrideName: 
+    overrideSpawnPoint: {fileID: 0}
+    loadout:
+      useAutoPick: 1
+      autoPickStrategy:
+        type: 0
+        distance: 0
+      primary: 
+      secondary: 
+      gear1: 
+      gear2: 
+      gear3: 
+      weaponStates:
+        primary:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        secondary:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        gear1:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        gear2:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        gear3:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+    overrideSkin: {fileID: 0}
+    equipped: 1
+    health: 0
+    hp: 1
+    attackersIgnoreEngagementRule: 0
+    dropsAmmoWhenKicked: 1
+    canDeployParachute: 1
+  squadMemberAIInfo:
+  - skill: 1
+    modifier:
+      meleeChargeRange: 30
+      canSprint: 1
+      ignoreFovCheck: 0
+      dieOnMovementFail: 0
+      alwaysChargeTarget: 0
+      showKillMessage: 1
+      canJoinPlayerSquad: 1
+      maxDetectionDistance: 1000
+      vehicleTopSpeedMultiplier: 1
+  aliveActorsOnTeamCap: 0
+  capCount: 30
+  onSpawnCompleteTrigger:
+    destinations: []
+--- !u!114 &8344509443386213455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128228794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 094088eed9467e047b2bd4623fed3e71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  repeatType: 0
+  team: 3
+  spawnSource: 0
+  respawnType: 0
+  autoRespawnTime: 10
+  squadMembersToSpawn: 1
+  pathGroup: {fileID: 0}
+  spawnAtPathGroupNodes: 0
+  detectionGroup: {fileID: 0}
+  onSquadAlerted:
+    destinations: []
+  squadState:
+    isAlert: 0
+    walkWhileUnalerted: 0
+    slowDetection: 0
+    leavePathGroupWhenAlerted: 0
+    allowLeaveVehicleWhenStuck: 0
+    followersInvisibleToUnalertedEnemies: 0
+    engagementRule: 0
+    order:
+      type: 0
+      target: {fileID: 0}
+      source: {fileID: 0}
+      targetPoint: {fileID: 0}
+  squadMemberInfo:
+  - overrideName: 
+    overrideSpawnPoint: {fileID: 0}
+    loadout:
+      useAutoPick: 1
+      autoPickStrategy:
+        type: 0
+        distance: 0
+      primary: 
+      secondary: 
+      gear1: 
+      gear2: 
+      gear3: 
+      weaponStates:
+        primary:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        secondary:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        gear1:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        gear2:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        gear3:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+    overrideSkin: {fileID: 0}
+    equipped: 1
+    health: 0
+    hp: 1
+    attackersIgnoreEngagementRule: 0
+    dropsAmmoWhenKicked: 1
+    canDeployParachute: 1
+  squadMemberAIInfo:
+  - skill: 1
+    modifier:
+      meleeChargeRange: 30
+      canSprint: 1
+      ignoreFovCheck: 0
+      dieOnMovementFail: 0
+      alwaysChargeTarget: 0
+      showKillMessage: 1
+      canJoinPlayerSquad: 1
+      maxDetectionDistance: 1000
+      vehicleTopSpeedMultiplier: 1
+  aliveActorsOnTeamCap: 0
+  capCount: 30
+  onSpawnCompleteTrigger:
+    destinations: []
+--- !u!114 &7059263441310574411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128228794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 094088eed9467e047b2bd4623fed3e71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  repeatType: 0
+  team: 3
+  spawnSource: 0
+  respawnType: 0
+  autoRespawnTime: 10
+  squadMembersToSpawn: 1
+  pathGroup: {fileID: 0}
+  spawnAtPathGroupNodes: 0
+  detectionGroup: {fileID: 0}
+  onSquadAlerted:
+    destinations: []
+  squadState:
+    isAlert: 0
+    walkWhileUnalerted: 0
+    slowDetection: 0
+    leavePathGroupWhenAlerted: 0
+    allowLeaveVehicleWhenStuck: 0
+    followersInvisibleToUnalertedEnemies: 0
+    engagementRule: 0
+    order:
+      type: 0
+      target: {fileID: 0}
+      source: {fileID: 0}
+      targetPoint: {fileID: 0}
+  squadMemberInfo:
+  - overrideName: 
+    overrideSpawnPoint: {fileID: 0}
+    loadout:
+      useAutoPick: 1
+      autoPickStrategy:
+        type: 0
+        distance: 0
+      primary: 
+      secondary: 
+      gear1: 
+      gear2: 
+      gear3: 
+      weaponStates:
+        primary:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        secondary:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        gear1:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        gear2:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        gear3:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+    overrideSkin: {fileID: 0}
+    equipped: 1
+    health: 0
+    hp: 1
+    attackersIgnoreEngagementRule: 0
+    dropsAmmoWhenKicked: 1
+    canDeployParachute: 1
+  squadMemberAIInfo:
+  - skill: 1
+    modifier:
+      meleeChargeRange: 30
+      canSprint: 1
+      ignoreFovCheck: 0
+      dieOnMovementFail: 0
+      alwaysChargeTarget: 0
+      showKillMessage: 1
+      canJoinPlayerSquad: 1
+      maxDetectionDistance: 1000
+      vehicleTopSpeedMultiplier: 1
+  aliveActorsOnTeamCap: 0
+  capCount: 30
+  onSpawnCompleteTrigger:
+    destinations: []
+--- !u!114 &3156585819149695864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128228794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 094088eed9467e047b2bd4623fed3e71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  repeatType: 0
+  team: 3
+  spawnSource: 0
+  respawnType: 0
+  autoRespawnTime: 10
+  squadMembersToSpawn: 1
+  pathGroup: {fileID: 0}
+  spawnAtPathGroupNodes: 0
+  detectionGroup: {fileID: 0}
+  onSquadAlerted:
+    destinations: []
+  squadState:
+    isAlert: 0
+    walkWhileUnalerted: 0
+    slowDetection: 0
+    leavePathGroupWhenAlerted: 0
+    allowLeaveVehicleWhenStuck: 0
+    followersInvisibleToUnalertedEnemies: 0
+    engagementRule: 0
+    order:
+      type: 0
+      target: {fileID: 0}
+      source: {fileID: 0}
+      targetPoint: {fileID: 0}
+  squadMemberInfo:
+  - overrideName: 
+    overrideSpawnPoint: {fileID: 0}
+    loadout:
+      useAutoPick: 1
+      autoPickStrategy:
+        type: 0
+        distance: 0
+      primary: 
+      secondary: 
+      gear1: 
+      gear2: 
+      gear3: 
+      weaponStates:
+        primary:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        secondary:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        gear1:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        gear2:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        gear3:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+    overrideSkin: {fileID: 0}
+    equipped: 1
+    health: 0
+    hp: 1
+    attackersIgnoreEngagementRule: 0
+    dropsAmmoWhenKicked: 1
+    canDeployParachute: 1
+  squadMemberAIInfo:
+  - skill: 1
+    modifier:
+      meleeChargeRange: 30
+      canSprint: 1
+      ignoreFovCheck: 0
+      dieOnMovementFail: 0
+      alwaysChargeTarget: 0
+      showKillMessage: 1
+      canJoinPlayerSquad: 1
+      maxDetectionDistance: 1000
+      vehicleTopSpeedMultiplier: 1
+  aliveActorsOnTeamCap: 0
+  capCount: 30
+  onSpawnCompleteTrigger:
+    destinations: []
+--- !u!114 &6380548981142715035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128228794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 094088eed9467e047b2bd4623fed3e71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  repeatType: 0
+  team: 3
+  spawnSource: 0
+  respawnType: 0
+  autoRespawnTime: 10
+  squadMembersToSpawn: 1
+  pathGroup: {fileID: 0}
+  spawnAtPathGroupNodes: 0
+  detectionGroup: {fileID: 0}
+  onSquadAlerted:
+    destinations: []
+  squadState:
+    isAlert: 0
+    walkWhileUnalerted: 0
+    slowDetection: 0
+    leavePathGroupWhenAlerted: 0
+    allowLeaveVehicleWhenStuck: 0
+    followersInvisibleToUnalertedEnemies: 0
+    engagementRule: 0
+    order:
+      type: 0
+      target: {fileID: 0}
+      source: {fileID: 0}
+      targetPoint: {fileID: 0}
+  squadMemberInfo:
+  - overrideName: 
+    overrideSpawnPoint: {fileID: 0}
+    loadout:
+      useAutoPick: 1
+      autoPickStrategy:
+        type: 0
+        distance: 0
+      primary: 
+      secondary: 
+      gear1: 
+      gear2: 
+      gear3: 
+      weaponStates:
+        primary:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        secondary:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        gear1:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        gear2:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+        gear3:
+          overrideDefault: 0
+          loadedAmmo: 0
+          spareAmmo: 0
+    overrideSkin: {fileID: 0}
+    equipped: 1
+    health: 0
+    hp: 1
+    attackersIgnoreEngagementRule: 0
+    dropsAmmoWhenKicked: 1
+    canDeployParachute: 1
+  squadMemberAIInfo:
+  - skill: 1
+    modifier:
+      meleeChargeRange: 30
+      canSprint: 1
+      ignoreFovCheck: 0
+      dieOnMovementFail: 0
+      alwaysChargeTarget: 0
+      showKillMessage: 1
+      canJoinPlayerSquad: 1
+      maxDetectionDistance: 1000
+      vehicleTopSpeedMultiplier: 1
+  aliveActorsOnTeamCap: 0
+  capCount: 30
+  onSpawnCompleteTrigger:
+    destinations: []
 --- !u!1 &2440614776686521803
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,10 +806,8 @@ GameObject:
   - component: {fileID: 2440614776686521398}
   - component: {fileID: 304519262158935008}
   - component: {fileID: 2440614776686521399}
-  - component: {fileID: 2440614776686521800}
-  - component: {fileID: 2440614776686521801}
-  - component: {fileID: 2440614776686521396}
-  - component: {fileID: 2440614776686521397}
+  - component: {fileID: 652433654}
+  - component: {fileID: 652433655}
   m_Layer: 0
   m_Name: Area Secure Bark Trigger Group
   m_TagString: Untagged
@@ -31,9 +824,9 @@ Transform:
   m_GameObject: {fileID: 2440614776686521803}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.1300852, y: 0.8327205, z: 2.2616193}
   m_Children:
-  - {fileID: 5789831939443501412}
+  - {fileID: 2128228795}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -73,8 +866,8 @@ MonoBehaviour:
     - {x: -20, y: -20}
     ceiling: 10
     floor: 10
-  checkPlayerOnly: 0
---- !u!114 &2440614776686521800
+  checkPlayerOnly: 1
+--- !u!114 &652433654
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83,30 +876,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 2440614776686521803}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 398008da6d6c53d42b1c18eb99db1175, type: 3}
+  m_Script: {fileID: 11500000, guid: 966fdca31ed4b99499d9c3757cbcbaa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSyncVolumes:
+  - {fileID: 2440614776686521399}
+  syncSends: []
+--- !u!114 &652433655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2440614776686521803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bdf8def80d49424485549c3cdd8ad82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerVolume: {fileID: 2440614776686521399}
   filter:
     filters:
-    - type: 1
-      team: 3
-      volume: {fileID: 0}
-      vehicle:
-        type: 0
-        vehicleSpawner: {fileID: 0}
-        turretSpawner: {fileID: 0}
-        vehicleInstance: {fileID: 0}
-      squad:
-        type: 0
-        spawner: {fileID: 0}
-        closestToPoint: {fileID: 0}
-        filter:
-          filters: []
-        maxDistance: 0
-        team: 0
-      invertFilter: 0
-    - type: 2
-      team: 3
+    - type: 0
+      team: 0
       volume: {fileID: 2440614776686521399}
       vehicle:
         type: 0
@@ -122,260 +914,8 @@ MonoBehaviour:
         maxDistance: 0
         team: 0
       invertFilter: 0
-  ignoreSilentKills: 0
-  onDeath:
+  onEnter:
     destinations:
-    - {fileID: 2440614776686521801}
---- !u!114 &2440614776686521801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2440614776686521803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faa505965bfc99c4486827fc7dbd0972, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  repeatType: 1
-  condition: 2
-  actor:
-    type: 0
-    squad:
-      type: 0
-      spawner: {fileID: 0}
-      closestToPoint: {fileID: 0}
-      filter:
-        filters: []
-      maxDistance: 0
-      team: 0
-    squadmemberIndex: 0
-    vehicle:
-      type: 0
-      vehicleSpawner: {fileID: 0}
-      turretSpawner: {fileID: 0}
-      vehicleInstance: {fileID: 0}
-    seatIndex: 0
-  squad:
-    type: 0
-    spawner: {fileID: 0}
-    closestToPoint: {fileID: 0}
-    filter:
-      filters: []
-    maxDistance: 0
-    team: 0
-  vehicle:
-    type: 0
-    vehicleSpawner: {fileID: 0}
-    turretSpawner: {fileID: 0}
-    vehicleInstance: {fileID: 0}
-  targetGameObject: {fileID: 0}
-  team: 0
-  volume: {fileID: 2440614776686521399}
-  count: 0
-  onTrue:
-    destinations:
-    - {fileID: 2440614776686521396}
-  onFalse:
+    - {fileID: 2128228800}
+  onExit:
     destinations: []
---- !u!114 &2440614776686521396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2440614776686521803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d185f037bade5744be1f566ec881fa5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  repeatType: 1
-  signalType: 0
-  delayTime: 1
-  randomAdd: 0
-  onDelayDoneTrigger:
-    destinations:
-    - {fileID: 2440614776686521397}
---- !u!114 &2440614776686521397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2440614776686521803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faa505965bfc99c4486827fc7dbd0972, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  repeatType: 1
-  condition: 200
-  actor:
-    type: 0
-    squad:
-      type: 0
-      spawner: {fileID: 0}
-      closestToPoint: {fileID: 0}
-      filter:
-        filters: []
-      maxDistance: 0
-      team: 0
-    squadmemberIndex: 0
-    vehicle:
-      type: 0
-      vehicleSpawner: {fileID: 0}
-      turretSpawner: {fileID: 0}
-      vehicleInstance: {fileID: 0}
-    seatIndex: 0
-  squad:
-    type: 0
-    spawner: {fileID: 0}
-    closestToPoint: {fileID: 0}
-    filter:
-      filters: []
-    maxDistance: 0
-    team: 0
-  vehicle:
-    type: 0
-    vehicleSpawner: {fileID: 0}
-    turretSpawner: {fileID: 0}
-    vehicleInstance: {fileID: 0}
-  targetGameObject: {fileID: 0}
-  team: 2
-  volume: {fileID: 2440614776686521399}
-  count: 0
-  onTrue:
-    destinations:
-    - {fileID: 2440614776686521801}
-  onFalse:
-    destinations: []
---- !u!1 &3146378325297446931
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5789831939443501412}
-  - component: {fileID: 1350375620593446165}
-  - component: {fileID: 6998045196698979951}
-  - component: {fileID: 7778252742835934523}
-  - component: {fileID: 7464305028389685854}
-  - component: {fileID: 871100969922174508}
-  m_Layer: 0
-  m_Name: On Secure Dialog
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5789831939443501412
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3146378325297446931}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2440614776686521398}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1350375620593446165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3146378325297446931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1514fc679ce3eea4eaa7af9370887cee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  infoText: 'If you want anything else to happen besides just the dialog playing,
-    you can add more receivers to the TriggerPassthroughNode OnTriggered signal.
-
-
-    Keep
-    in mind that this node will only be triggered if the player is inside the volume
-    when the last enemy drives, so '
---- !u!114 &6998045196698979951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3146378325297446931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae6d99b4fcab7f744b7b4b317152fd8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  repeatType: 0
-  onTriggered:
-    destinations:
-    - {fileID: 7778252742835934523}
---- !u!114 &7778252742835934523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3146378325297446931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25180ebf807ab1247b56be71f8977fe6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  repeatType: 0
-  lines:
-  - actorPose: p grunt
-    overrideName: 
-    text: Overlap!
-    portraitGrain: 0
-    onSayLine:
-      destinations: []
-    blipSoundPlayback: 0
-    overrideBlipSound: 0
-    overrideBlipCustomClip: {fileID: 0}
-    duration: 5
-  onDialogComplete:
-    destinations:
-    - {fileID: 871100969922174508}
-  stopActiveDialogOnComponentDisabled: 0
---- !u!114 &7464305028389685854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3146378325297446931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1514fc679ce3eea4eaa7af9370887cee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  infoText: The next component deactivates the entire GameObject after the dialog
-    has finished to remove any overhead from updating
---- !u!114 &871100969922174508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3146378325297446931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 239cde7441efe6042a16c228ec477b66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  repeatType: 0
-  objectsToActivate: []
-  objectsToDeactivate:
-  - {fileID: 2440614776686521803}
